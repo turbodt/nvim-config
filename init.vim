@@ -121,7 +121,7 @@ set colorcolumn=80
 
 
 "------------Start Python PEP 8 stuff----------------
-let g:autopep8_on_save = 0
+let g:autopep8_on_save = 1
 let g:autopep8_disable_show_diff=1
 
 au BufRead,BufNewFile *.py,*.pyw set smarttab
