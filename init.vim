@@ -205,3 +205,15 @@ au BufNewFile,BufRead *.h,*.cpp,*.c
   \ expandtab
   \ autoindent
   \ fileformat=unix
+
+"sh stuff"
+autocmd FileType bash setlocal tabstop=2
+autocmd FileType bash setlocal tabstop=2
+autocmd FileType bash 
+  \ setlocal tabstop=2
+  \ softtabstop=2
+  \ shiftwidth=2
+  \ textwidth=79
+  \ expandtab
+  \ autoindent
+  \ fileformat=unix

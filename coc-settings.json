@@ -1,21 +1,21 @@
 {
-	"coc.preferences.formatOnSaveFiletypes": [
-		"javascript",
-		"typescript",
-		"typescriptreact",
-		"json",
-		"javascriptreact",
-		"typescript.tsx"
-	],
-	"eslint.filetypes": [
-		"javascript",
-		"typescript",
-		"typescriptreact",
-		"javascriptreact",
-		"typescript.tsx"
-	],
-	"coc.preferences.diagnostic.virtualText": true,
-	"tslint.enable": true,
-	"tslint.autoFixOnSave": true,
-	"prettier.endOfLine": "lf"
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "coc.preferences.diagnostic.virtualText": true,
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+  "prettier.endOfLine": "lf"
 }
