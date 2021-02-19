@@ -29,6 +29,9 @@ call plug#begin("~/.vim/plugged")
   " Python
   Plug 'tell-k/vim-autopep8'
   Plug 'nvie/vim-flake8'
+
+  " Mustache
+  Plug 'mustache/vim-mustache-handlebars'
 call plug#end()
 
 " Enable theming support
