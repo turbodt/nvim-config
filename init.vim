@@ -3,6 +3,8 @@ call plug#begin("~/.vim/plugged")
   " Theme
   "" Plug 'dracula/vim'
   Plug 'morhetz/gruvbox'
+  Plug 'glepnir/oceanic-material'
+  Plug 'phanviet/vim-monokai-pro'
 
   " Language Client
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -41,7 +43,7 @@ endif
 
 " Theme
 syntax enable
-colorscheme gruvbox
+colorscheme oceanic_material
 let g:gruvbox_contrast_dark = 'hard'
 
 " NERDTree
