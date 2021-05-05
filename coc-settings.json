@@ -17,5 +17,11 @@
   "coc.preferences.diagnostic.virtualText": true,
   "tslint.enable": true,
   "tslint.autoFixOnSave": true,
-  "prettier.endOfLine": "lf"
+  "prettier.endOfLine": "lf",
+
+  "python.pythonPath": "/usr/bin/python3",
+  "python.jediEnabled": false,
+  "python.jediPath": "/usr/lib/python3.8/site-packages",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true
 }

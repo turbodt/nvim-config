@@ -26,7 +26,7 @@ call plug#begin("~/.vim/plugged")
   " Prettier
   Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html', 'python'] }
 
   " Python
   Plug 'tell-k/vim-autopep8'
@@ -126,8 +126,12 @@ set colorcolumn=80
 
 
 "------------Start Python PEP 8 stuff----------------
-let g:autopep8_on_save = 1
+
+" use flak8 instead of autopep8
+let g:autopep8_on_save = 0
 let g:autopep8_disable_show_diff=1
+
+let g:flake8_show_in_file=1
 
 au BufRead,BufNewFile *.py,*.pyw set smarttab
 au BufRead,BufNewFile *.py,*.pyw set shiftround
@@ -157,10 +161,6 @@ syntax on
 " make backspaces more powerfull
 set backspace=indent,eol,start
 
-"Folding based on indentation:
-" autocmd FileType python set foldmethod=indent
-"use space to open folds
-" nnoremap <space> za
 "----------Stop python PEP 8 stuff--------------
 
 "js stuff"
@@ -176,7 +176,7 @@ au BufRead,BufNewFile *.html,*.css,*.scss,*.js,*.jsx,*.ts,*.tsx setlocal shiftwi
 au BufNewFile *.html,*.css,*.scss,*.js,*.jsx,*.ts,*.tsx set fileformat=unix
 "autocmd FileType typescript set autoindent
 "autocmd FileType javascript set autoindent
-autocmd FileType html  set autoindent
+autocmd FileType html set autoindent
 autocmd FileType css set autoindent
 "autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
 
