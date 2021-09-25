@@ -8,7 +8,7 @@ call plug#begin("~/.vim/plugged")
 
   " Language Client
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python']
+  let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-clangd', 'coc-cmake', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python']
 
   " TypeScript Highlighting
   Plug 'leafgarland/typescript-vim'
