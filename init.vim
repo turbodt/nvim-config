@@ -34,6 +34,9 @@ call plug#begin("~/.vim/plugged")
 
   " Mustache
   Plug 'mustache/vim-mustache-handlebars'
+
+  " Latex
+  Plug 'lervag/vimtex'
 call plug#end()
 
 " Enable theming support
@@ -124,7 +127,6 @@ set listchars=tab:>-
 set encoding=utf-8
 set colorcolumn=80
 
-
 "------------Start Python PEP 8 stuff----------------
 
 " use flak8 instead of autopep8
@@ -162,6 +164,16 @@ syntax on
 set backspace=indent,eol,start
 
 "----------Stop python PEP 8 stuff--------------
+
+
+"----------Latex----------
+" source: https://castel.dev/post/lecture-notes-1/
+let g:tex_flavor='latex'
+let g:vimtex_view_method='general'
+"let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 "js stuff"
 autocmd FileType typescript setlocal tabstop=2
