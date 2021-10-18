@@ -127,6 +127,13 @@ set listchars=tab:>-
 set encoding=utf-8
 set colorcolumn=80
 
+" Spell Check
+setlocal spell
+set spelllang=en_us
+"set spelllang=en_gb,es_es,ca_ES
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+syntax spell toplevel
+
 "------------Start Python PEP 8 stuff----------------
 
 " use flak8 instead of autopep8
@@ -158,7 +165,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " For full syntax highlighting:
 let python_highlight_all=1
-syntax on
 
 " make backspaces more powerfull
 set backspace=indent,eol,start
@@ -172,7 +178,7 @@ let g:tex_flavor='latex'
 let g:vimtex_view_method='general'
 "let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
+set conceallevel=0
 let g:tex_conceal='abdmg'
 
 "js stuff"
