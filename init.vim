@@ -46,7 +46,7 @@ endif
 
 " Theme
 syntax enable
-colorscheme oceanic_material
+colorscheme monokai_pro
 let g:gruvbox_contrast_dark = 'hard'
 
 " NERDTree
@@ -103,20 +103,20 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " uses zsh instead of bash
 function! OpenTerminal()
   split term://bash
-  "resize 10
-  set nonumber
+  resize 10
+  set norelativenumber
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
 function! OpenVerticalTerminal()
   vertical split term://bash
-  set nonumber
+  set norelativenumber
 endfunction
 nnoremap <c-n><c-s> :call OpenVerticalTerminal()<CR>
 
 " general
 set noswapfile
-set number
+set relativenumber
 set clipboard+=unnamedplus
 
 " display char as a character
