@@ -102,17 +102,23 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 " open terminal on ctrl+;
 " uses zsh instead of bash
 function! OpenTerminal()
-  split term://bash
+  split term://zsh
   resize 10
   set norelativenumber
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
 function! OpenVerticalTerminal()
-  vertical split term://bash
+  vertical split term://zsh
   set norelativenumber
 endfunction
 nnoremap <c-n><c-s> :call OpenVerticalTerminal()<CR>
+
+function! OpenNewTabTerminal()
+  tabnew term://zsh
+  set norelativenumber
+endfunction
+nnoremap <c-n><c-t> :call OpenNewTabTerminal()<CR>
 
 " general
 set noswapfile
