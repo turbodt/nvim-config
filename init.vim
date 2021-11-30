@@ -39,6 +39,10 @@ call plug#begin("~/.vim/plugged")
   Plug 'lervag/vimtex'
 call plug#end()
 
+" set leader
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+
 " Enable theming support
 if (has("termguicolors"))
  set termguicolors
@@ -127,7 +131,7 @@ set clipboard+=unnamedplus
 
 " display char as a character
 set list
-set listchars=tab:>-
+set listchars=tab:\ ,trail:␣,eol:
 
 " Set the default file encoding to UTF-8:
 set encoding=utf-8
