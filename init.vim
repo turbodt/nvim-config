@@ -131,7 +131,8 @@ set clipboard+=unnamedplus
 
 " display char as a character
 set list
-set listchars=tab:\ ,trail:␣,eol:
+set listchars=tab:\ ,trail:␣
+"set listchars=tab:\ ,trail:␣,eol:
 
 " Set the default file encoding to UTF-8:
 set encoding=utf-8
