@@ -108,25 +108,25 @@ au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 function! OpenTerminal()
   split term://zsh
   resize 10
-  set norelativenumber
+  set nonumber norelativenumber
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
 function! OpenVerticalTerminal()
   vertical split term://zsh
-  set norelativenumber
+  set nonumber norelativenumber
 endfunction
 nnoremap <c-n><c-s> :call OpenVerticalTerminal()<CR>
 
 function! OpenNewTabTerminal()
   tabnew term://zsh
-  set norelativenumber
+  set nonumber norelativenumber
 endfunction
 nnoremap <c-n><c-t> :call OpenNewTabTerminal()<CR>
 
 " general
 set noswapfile
-set relativenumber
+set number relativenumber
 set clipboard+=unnamedplus
 
 " display char as a character
