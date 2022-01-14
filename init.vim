@@ -99,6 +99,12 @@ nnoremap <C-H> <C-W><C-H>
 
 " tabs
 nnoremap <C-t> :tabnew .<CR>
+nnoremap <A-[> gT
+nnoremap <A-]> gt
+" Note that vim Shift+[ => { for vim, so <A-S-[> => <A-{>
+nnoremap <A-{> :tabmove -1<CR>
+nnoremap <A-}> :tabmove +1<CR>
+
 
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
