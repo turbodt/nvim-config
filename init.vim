@@ -161,7 +161,7 @@ syntax spell toplevel
 
 "------------Start Python PEP 8 stuff----------------
 
-" use flak8 instead of autopep8
+" use flake8 instead of autopep8
 let g:autopep8_on_save = 0
 let g:autopep8_disable_show_diff=1
 
