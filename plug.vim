@@ -13,7 +13,7 @@ if has("nvim")
                                 " Neovim's language server client
   Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }	" Lightweight lsp plugin based on neovim
 							" built-in lsp with highly a performant UI
-
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }	" Parser generator tool
 endif
 
 call plug#end()
