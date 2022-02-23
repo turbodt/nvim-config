@@ -83,6 +83,14 @@ set splitbelow
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
 
+" Move
+inoremap <A-h> <left>
+inoremap <A-l> <right>
+inoremap <A-j> <down>
+inoremap <A-k> <up>
+cnoremap <A-h> <left>
+cnoremap <A-l> <right>
+
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
