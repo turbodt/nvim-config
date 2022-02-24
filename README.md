@@ -27,8 +27,6 @@ The following `Plug` has been added:
 
   - [tpope/vim-rhubarb](https://github.com/tpope/vim-rhubarb): If fugitive.vim is the Git, rhubarb.vim is the Hub.
 
-  - [cohama/lexima.vim](https://github.com/cohama/lexima.vim): Auto close parentheses.
-
 #### LSP
 
   - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): A collection of common configurations for Neovim's built-in language server client.
@@ -48,6 +46,11 @@ The following `Plug` has been added:
   - [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp): A completion engine plugin for neovim written in Lua. Completion sources are installed from external repositories and "sourced".
 
   - [onsails/lspkind-nvim](https://github.com/onsails/lspkind-nvim): This tiny plugin adds vscode-like pictograms to neovim built-in lsp.
+
+  - [windwp/nvim-autopairs](https://github.com/windwp/nvim-autopairs): A super powerful autopair plugin for Neovim that supports multiple characters.
+
+  - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag): Use treesitter to autoclose and autorename html tag.
+
 
 #### File system
 
