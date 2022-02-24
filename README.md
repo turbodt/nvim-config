@@ -60,6 +60,8 @@ The following `Plug` has been added:
 
   - [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons): Adds icons to the plugins.
 
+  - [folke/lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim): Automatically creates missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin lsp client.
+
 
 
 ## Dependencies

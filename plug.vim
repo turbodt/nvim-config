@@ -25,6 +25,7 @@ if has("nvim")
 
   Plug 'scrooloose/nerdtree'      " A file explorer
   Plug 'ryanoasis/vim-devicons'   " Add icons
+  Plug 'folke/lsp-colors.nvim'    " Add colors to LSP diagnostics
 endif
 
 call plug#end()
