@@ -4,22 +4,25 @@ endif
 
 call plug#begin()
 
-Plug 'tpope/vim-fugitive'	" git
-Plug 'tpope/vim-rhubarb'	" git hub
-Plug 'cohama/lexima.vim'	" auto close parentheses
+Plug 'tpope/vim-fugitive'  " git
+Plug 'tpope/vim-rhubarb'  " git hub
+Plug 'cohama/lexima.vim'  " auto close parentheses
 
 if has("nvim")
-  Plug 'neovim/nvim-lspconfig'	" Collection of common configurations for
+  Plug 'neovim/nvim-lspconfig'  " Collection of common configurations for
                                 " Neovim's language server client
-  Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }	" Lightweight lsp plugin based on neovim
-							" built-in lsp with highly a performant UI
-  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }	" Parser generator tool
-  
-  Plug 'L3MON4D3/LuaSnip'	" Text transformation (completion) snipets
-  Plug 'hrsh7th/cmp-nvim-lsp'	" nvim-cmp source for neovim's built-in language server client
-  Plug 'hrsh7th/cmp-buffer'	" nvim-cmp source for buffer words 
-  Plug 'hrsh7th/nvim-cmp'	" A completion engine plugin for neovim written in Lua.
-  Plug 'onsails/lspkind-nvim'	" This tiny plugin adds vscode-like pictograms to neovim built-in lsp
+  Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }  " Lightweight lsp plugin based on neovim
+                                                      " built-in lsp with highly a performant UI
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }  " Parser generator tool
+
+  Plug 'L3MON4D3/LuaSnip'     " Text transformation (completion) snipets
+  Plug 'hrsh7th/cmp-nvim-lsp' " nvim-cmp source for neovim's built-in language server client
+  Plug 'hrsh7th/cmp-buffer'   " nvim-cmp source for buffer words 
+  Plug 'hrsh7th/nvim-cmp'     " A completion engine plugin for neovim written in Lua.
+  Plug 'onsails/lspkind-nvim' " This tiny plugin adds vscode-like pictograms to neovim built-in lsp
+
+  Plug 'scrooloose/nerdtree'      " A file explorer
+  Plug 'ryanoasis/vim-devicons'   " Add icons
 endif
 
 call plug#end()
