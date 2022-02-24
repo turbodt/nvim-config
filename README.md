@@ -69,3 +69,4 @@ The following `Plug` has been added:
 Some `npm` dependencies are:
   - `npm install -g typescript typescript-language-server`
   - `npm install -g neovim`
+  - `npm i -g diagnostic-languageserver`
