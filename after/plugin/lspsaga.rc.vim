@@ -13,7 +13,7 @@ saga.init_lsp_saga {
 
 EOF
 
-nnoremap <silent> <C-j> :Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent> <C-d> :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> gp :Lspsaga preview_definition<CR>
 
 nnoremap <silent> T :Lspsaga hover_doc<CR>

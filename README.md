@@ -104,11 +104,11 @@ Some `npm` dependencies are:
 | Normal | `<space>rn` |  vim.lsp.buf.rename() | after/plugin/lspconfig.rc.vim |
 | Normal | `<space>ca` |  vim.lsp.buf.code_action() | after/plugin/lspconfig.rc.vim |
 | Normal | `gr` | vim.lsp.buf.references() | after/plugin/lspconfig.rc.vim |
-| Normal | `<space>e` |  vim.lsp.diagnostic.show_line_diagnostics() | after/plugin/lspconfig.rc.vim |
-| Normal | `<S-C-j>` |  vim.lsp.diagnostic.goto_next() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>e` |  vim.lsp.diagnostic.open_float() | after/plugin/lspconfig.rc.vim |
+| Normal | `Shift + Ctrl + d` |  vim.lsp.diagnostic.goto_next() | after/plugin/lspconfig.rc.vim |
 | Normal | `<space>q` |  vim.lsp.diagnostic.set_loclist() | after/plugin/lspconfig.rc.vim |
 | Normal | `<space>f` |  vim.lsp.buf.formatting() | after/plugin/lspconfig.rc.vim |
-| Normal | `Ctrl + j` | diagnostic_jump_next | after/plugin/lspsaga.rc.vim |
+| Normal | `Ctrl + d` | diagnostic_jump_next | after/plugin/lspsaga.rc.vim |
 | Normal | `gp` | preview_definition | after/plugin/lspsaga.rc.vim |
 | Normal | `T` | hover_doc | after/plugin/lspsaga.rc.vim |
 | | `Ctrl + f` | smart_scroll_with_saga(1) | after/plugin/lspsaga.rc.vim |
