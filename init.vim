@@ -39,10 +39,6 @@ if has('nvim')
   set inccommand=split
 endif
 
-"leader key
-let mapleader=" "
-nnoremap <SPACE> <Nop>
-
 " Suppress appending <PasteStart> and <PasteEnd> when pasting
 set t_BE=
 
@@ -53,17 +49,19 @@ set lazyredraw
 " How many tenths of a second to blink when matching brackets
 "set mat=2
 " Ignore case when searching
-set ignorecase
+" set ignorecase
 " Be smart when using tabs ;)
 set smarttab
+
 " indents
 filetype plugin indent on
 set shiftwidth=2
 set tabstop=2
 set ai "Auto indent
 set si "Smart indent
-set nowrap "No Wrap lines
+"set nowrap "No Wrap lines
 set backspace=start,eol,indent
+
 " Finding files - Search down into subfolders
 set path+=**
 set wildignore+=*/node_modules/*
@@ -79,49 +77,6 @@ set formatoptions+=r
 set list
 set listchars=tab:\ ,trail:␣
 "set listchars=tab:\ ,trail:␣,eol:
-"}}}
-
-" Create directory on safe if it does not exists "{{{
-" ---------------------------------------------------------------------
-" source: https://travisjeffery.com/b/2011/11/saving-files-in-nonexistent-directories-with-vim/
-augroup vimrc-auto-mkdir
-  autocmd!
-  autocmd BufWritePre * call s:auto_mkdir(expand('<afile>:p:h'), v:cmdbang)
-  function! s:auto_mkdir(dir, force)
-    if !isdirectory(a:dir)
-          \   && (a:force
-          \       || input("'" . a:dir . "' does not exist. Create? [y/N]") =~? '^y\%[es]$')
-      call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
-    endif
-  endfunction
-augroup END
-"}}}
-
-
-" Terminal "{{{
-" ---------------------------------------------------------------------
-
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-
-" open terminal on ctrl+;
-" uses zsh instead of bash
-function! OpenTerminal()
-  split term://zsh
-  resize 10
-  set nonumber norelativenumber
-endfunction
-
-function! OpenVerticalTerminal()
-  vertical split term://zsh
-  set nonumber norelativenumber
-endfunction
-
-function! OpenNewTabTerminal()
-  tabnew term://zsh
-  set nonumber norelativenumber
-endfunction
-
 "}}}
 
 " Highlights "{{{
@@ -180,6 +135,7 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 " ---------------------------------------------------------------------
 runtime ./plug.vim
 if has("unix")
+  runtime ./terminal.vim
   let s:uname = system("uname -s")
   " Do Mac stuff
   if s:uname == "Darwin\n"
@@ -213,3 +169,10 @@ if exists("&termguicolors") && exists("&winblend")
 endif
 
 "}}}
+
+" Others "{{{
+" ---------------------------------------------------------------------
+
+runtime ./mkdir-on-save.vim
+"}}}
+
