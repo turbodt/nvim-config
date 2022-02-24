@@ -70,3 +70,48 @@ Some `npm` dependencies are:
   - `npm install -g typescript typescript-language-server`
   - `npm install -g neovim`
   - `npm i -g diagnostic-languageserver`
+
+## Current Mappings
+
+
+| Mode | Mapping | Description | File |
+| --- | --- | --- | --- |
+| | `<space>` | Leader | maps.vim |
+| Normal | `<Esc>` | Turn terminal in normal mode | maps.vim |
+| Normal | `Ctrl + {hjkl}` | Move between panels | maps.vim |
+| Terminal | `Ctrl + {hjkl}` | Move between panels | maps.vim |
+| Normal | `Ctrl + t` | Create new tab | maps.vim |
+| Normal | `Ctrl + n` | Open bottom terminal | maps.vim |
+| Normal | `Ctrl + ns` | Open vertical terminal | maps.vim |
+| Normal | `Ctrl + nt` | Open terminal in a new tab | maps.vim |
+| Normal | `Ctrl + a` | Select all | maps.vim |
+| Visual | `*` | Search selected text backwards | maps.vim |
+| Visual | `#` | Search selected text forwards | maps.vim |
+| Normal | `Alt + {'[', ']'}` | Move to previous/next tab | maps.vim |
+| Normal | `Alt + {'{', '}'}` | Move current tab to previous/next position | maps.vim |
+|  | `Ctrl + d` | cmp.mapping.scroll_docks(-4) | after/plugin/cmp.rc.vim |
+|  | `Ctrl + f` | cmp.mapping.scroll_docks(4) | after/plugin/cmp.rc.vim |
+|  | `Ctrl + <space>` | cmp.mapping.complete(4) | after/plugin/cmp.rc.vim |
+|  | `Ctrl + e` | cmp.mapping.close() | after/plugin/cmp.rc.vim |
+|  | `<CR>` | cmp.mapping.confirm() | after/plugin/cmp.rc.vim |
+| Normal | `gD` | vim.lsp.buf.declaration() | after/plugin/lspconfig.rc.vim |
+| Normal | `gd` | vim.lsp.buf.definition() | after/plugin/lspconfig.rc.vim |
+| Normal | `gi` | vim.lsp.buf.implementation() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>wa` |  vim.lsp.buf.add_workspace_folder() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>wr` |  vim.lsp.buf.remove_workspace_folder() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>wl` |  print(vim.inspect(vim.lsp.buf.list_workspace_folders())) | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>D` |  vim.lsp.buf.type_definition() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>rn` |  vim.lsp.buf.rename() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>ca` |  vim.lsp.buf.code_action() | after/plugin/lspconfig.rc.vim |
+| Normal | `gr` | vim.lsp.buf.references() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>e` |  vim.lsp.diagnostic.show_line_diagnostics() | after/plugin/lspconfig.rc.vim |
+| Normal | `<S-C-j>` |  vim.lsp.diagnostic.goto_next() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>q` |  vim.lsp.diagnostic.set_loclist() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>f` |  vim.lsp.buf.formatting() | after/plugin/lspconfig.rc.vim |
+| Normal | `Ctrl + j` | diagnostic_jump_next | after/plugin/lspsaga.rc.vim |
+| Normal | `gp` | preview_definition | after/plugin/lspsaga.rc.vim |
+| Normal | `T` | hover_doc | after/plugin/lspsaga.rc.vim |
+| | `Ctrl + f` | smart_scroll_with_saga(1) | after/plugin/lspsaga.rc.vim |
+| | `Ctrl + b` | smart_scroll_with_saga(-1) |  after/plugin/lspsaga.rc.vim |
+| Normal | `gh` | lsp_finder | after/plugin/lspsaga.rc.vim |
+| Normal | `Ctrl + b` | Toggle nerd tree | after/plugin/neerdtree.rc.vim |
