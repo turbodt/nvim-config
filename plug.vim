@@ -24,8 +24,11 @@ if has("nvim")
   Plug 'windwp/nvim-ts-autotag' " Use treesitter to autoclose and autorename html tag
 
   Plug 'scrooloose/nerdtree'      " A file explorer
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fzf is a general-purpose command-line fuzzy finder
+  Plug 'junegunn/fzf.vim'                             " Wrapper to use fzf on vim
   Plug 'ryanoasis/vim-devicons'   " Add icons
   Plug 'folke/lsp-colors.nvim'    " Add colors to LSP diagnostics
+
 endif
 
 call plug#end()

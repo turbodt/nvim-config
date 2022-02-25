@@ -115,3 +115,4 @@ Some `npm` dependencies are:
 | | `Ctrl + b` | smart_scroll_with_saga(-1) |  after/plugin/lspsaga.rc.vim |
 | Normal | `gh` | lsp_finder | after/plugin/lspsaga.rc.vim |
 | Normal | `Ctrl + b` | Toggle nerd tree | after/plugin/neerdtree.rc.vim |
+| Normal | `Ctrl + p` | Search file with FZF | after/plugin/fzf.rc.vim |
