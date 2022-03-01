@@ -62,7 +62,7 @@ The following `Plug` has been added:
 
   - [folke/lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim): Automatically creates missing LSP diagnostics highlight groups for color schemes that don't yet support the Neovim 0.5 builtin lsp client.
 
-
+  - [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim): Markdown preview on the browser.
 
 ## Dependencies
 
