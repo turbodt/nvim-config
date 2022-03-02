@@ -29,7 +29,7 @@ if has("nvim")
   Plug 'ryanoasis/vim-devicons'   " Add icons
   Plug 'folke/lsp-colors.nvim'    " Add colors to LSP diagnostics
 
-  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown'} " Markdown preview on the browser.
+  Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown'} " Markdown preview on the browser.
 
 
 endif
