@@ -24,9 +24,25 @@ nnoremap <A-]> gt
 nnoremap <A-{> :tabmove -1<CR>
 nnoremap <A-}> :tabmove +1<CR>
 
+inoremap <C-t> <Esc>:tabnew .<CR>
+inoremap <A-[> <Esc>gT
+inoremap <A-]> <Esc>gt
+inoremap <A-{> <Esc>:tabmove -1<CR>
+inoremap <A-}> <Esc>:tabmove +1<CR>
+
+tnoremap <C-t> <C-\>:tabnew .<CR>
+tnoremap <A-[> <C-\>gT
+tnoremap <A-]> <C-\>gt
+tnoremap <A-{> <C-\>:tabmove -1<CR>
+tnoremap <A-}> <C-\>:tabmove +1<CR>
+
 nnoremap <c-n> :call OpenTerminal()<CR>
 nnoremap <c-n><c-s> :call OpenVerticalTerminal()<CR>
 nnoremap <c-n><c-t> :call OpenNewTabTerminal()<CR>
+
+" Save
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>i
 
 " Select all
 nmap <C-a> gg<S-v>G
