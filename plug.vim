@@ -31,7 +31,7 @@ if has("nvim")
 
   Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown'} " Markdown preview on the browser.
 
-
+  Plug 'lervag/vimtex'  " VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
 endif
 
 call plug#end()
