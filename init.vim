@@ -111,6 +111,11 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " File types "{{{
 " ---------------------------------------------------------------------
+
+" C++
+au BufNewFile,BufRead *.cpp set filetype=cpp
+au BufNewFile,BufRead *.hpp set filetype=cpp
+
 " JavaScript
 au BufNewFile,BufRead *.es6 setf javascript
 " TypeScript

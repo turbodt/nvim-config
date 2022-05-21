@@ -17,7 +17,7 @@ if has("nvim")
   Plug 'L3MON4D3/LuaSnip'     " Text transformation (completion) snipets
   Plug 'hrsh7th/cmp-nvim-lsp' " nvim-cmp source for neovim's built-in language server client
 
-  Plug 'hrsh7th/cmp-buffer'   " nvim-cmp source for buffer words 
+  Plug 'hrsh7th/cmp-buffer'   " nvim-cmp source for buffer words
   Plug 'hrsh7th/nvim-cmp'     " A completion engine plugin for neovim written in Lua.
   Plug 'onsails/lspkind-nvim' " This tiny plugin adds vscode-like pictograms to neovim built-in lsp
   Plug 'windwp/nvim-autopairs' " A super powerful autopair plugin for Neovim that supports multiple characters.

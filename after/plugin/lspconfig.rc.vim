@@ -94,6 +94,24 @@ nvim_lsp.flow.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.ccls.setup {
+  on_attach = on_attach,
+  init_options = {
+    compilationDatabaseDirectory = "build";
+    index = {
+      threads = 0;
+    };
+    clang = {
+      excludeArgs = { "-frounding-math"} ;
+    };
+    cache = {
+      directory = ".ccls-cache";
+    };
+  },
+  filetypes = { "c", "cpp" },
+  capabilities = capabilities
+}
+
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
@@ -102,7 +120,7 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'pandoc' },
+  filetypes = { 'c', 'cc', 'css', 'cpp', 'javascript', 'javascriptreact', 'json', 'less', 'pandoc', 'scss', 'typescript', 'typescriptreact' },
   init_options = {
     linters = {
       eslint = {

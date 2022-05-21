@@ -76,6 +76,9 @@ Some `npm` dependencies are:
   - `npm install -g neovim`
   - `npm i -g diagnostic-languageserver`
 
+For C++:
+  - Archlinux: `sudo pacman -S ccls` as stated [here](https://github.com/MaskRay/ccls/wiki/Build#arch-linux).
+
 ## Current Mappings
 
 
