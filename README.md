@@ -79,6 +79,9 @@ Some `npm` dependencies are:
 For C++:
   - Archlinux: `sudo pacman -S ccls` as stated [here](https://github.com/MaskRay/ccls/wiki/Build#arch-linux).
 
+For Python:
+  - `npm i -g pyright`
+
 ## Current Mappings
 
 

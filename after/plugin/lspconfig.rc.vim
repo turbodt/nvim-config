@@ -118,9 +118,14 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp['pyright'].setup {
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'c', 'cc', 'css', 'cpp', 'javascript', 'javascriptreact', 'json', 'less', 'pandoc', 'scss', 'typescript', 'typescriptreact' },
+  filetypes = { 'c', 'cc', 'css', 'cpp', 'javascript', 'javascriptreact', 'json', 'less', 'pandoc', 'python', 'scss', 'typescript', 'typescriptreact' },
   init_options = {
     linters = {
       eslint = {
