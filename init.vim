@@ -168,11 +168,11 @@ if exists("&termguicolors") && exists("&winblend")
   set background=dark
   " Use NeoSolarized
   let g:neosolarized_termtrans=1
-  runtime ./colors/MonokaiPro.vim
-  runtime ./colors/NeoSolarized.vim
-  runtime ./colors/PaperColor.vim
-  runtime ./colors/Custom1.vim
-  colorscheme Custom1
+  " runtime ./colors/MonokaiPro.vim
+  " runtime ./colors/NeoSolarized.vim
+  " runtime ./colors/Custom1.vim
+  runtime ./colors/Custom2.vim
+  colorscheme Custom2
 endif
 
 "}}}
