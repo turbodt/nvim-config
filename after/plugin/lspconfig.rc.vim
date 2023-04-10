@@ -133,9 +133,17 @@ nvim_lsp['pyright'].setup {
     flags = lsp_flags,
 }
 
+nvim_lsp['phpactor'].setup {
+    on_attach = on_attach,
+    init_options = {
+        ["language_server_phpstan.enabled"] = false,
+        ["language_server_psalm.enabled"] = false,
+    }
+}
+
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'c', 'cc', 'css', 'cpp', 'javascript', 'javascriptreact', 'json', 'less', 'pandoc', 'python', 'scss', 'typescript', 'typescriptreact' },
+  filetypes = { 'c', 'cc', 'css', 'cpp', 'javascript', 'javascriptreact', 'json', 'less', 'pandoc', 'php', 'python', 'scss', 'typescript', 'typescriptreact' },
   init_options = {
     linters = {
       eslint = {
