@@ -10,7 +10,7 @@ Plug 'tpope/vim-rhubarb'  " git hub
 if has("nvim")
   Plug 'neovim/nvim-lspconfig'  " Collection of common configurations for
                                 " Neovim's language server client
-  Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim6.0' }  " Lightweight lsp plugin based on neovim
+  Plug 'nvimdev/lspsaga.nvim', { 'branch': 'main' }  " Lightweight lsp plugin based on neovim
                                                       " built-in lsp with highly a performant UI
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }  " Parser generator tool
 
