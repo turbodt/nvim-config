@@ -32,7 +32,8 @@ set shell=zsh
 set clipboard+=unnamedplus
 " Copy selected text in visual mode
 "set clipboard+=autoselect
-
+" Desactive mouse
+set mouse=
 
 " incremental substitution (neovim)
 if has('nvim')
