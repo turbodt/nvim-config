@@ -18,23 +18,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " tabs
 nnoremap <C-t> :tabnew .<CR>
-nnoremap <A-[> gT
-nnoremap <A-]> gt
-" Note that vim Shift+[ => { for vim, so <A-S-[> => <A-{>
-nnoremap <A-{> :tabmove -1<CR>
-nnoremap <A-}> :tabmove +1<CR>
-
-inoremap <C-t> <Esc>:tabnew .<CR>
-inoremap <A-[> <Esc>gT
-inoremap <A-]> <Esc>gt
-inoremap <A-{> <Esc>:tabmove -1<CR>
-inoremap <A-}> <Esc>:tabmove +1<CR>
-
-tnoremap <C-t> <C-\>:tabnew .<CR>
-tnoremap <A-[> <C-\>gT
-tnoremap <A-]> <C-\>gt
-tnoremap <A-{> <C-\>:tabmove -1<CR>
-tnoremap <A-}> <C-\>:tabmove +1<CR>
+" see ./unix.vim and ./unix.vim to custom mappings
 
 nnoremap <c-n> :call OpenTerminal()<CR>
 nnoremap <c-n><c-s> :call OpenVerticalTerminal()<CR>

@@ -143,10 +143,13 @@ runtime ./plug.vim
 if has("unix")
   runtime ./terminal.vim
   let s:uname = system("uname -s")
-  " Do Mac stuff
+
   if s:uname == "Darwin\n"
     runtime ./macos.vim
+  elseif s:uname == "Linux\n"
+    runtime ./linux.vim
   endif
+
 endif
 if has('win32')
   runtime ./windows.vim
