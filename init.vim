@@ -113,6 +113,10 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " File types "{{{
 " ---------------------------------------------------------------------
 
+" C
+au BufNewFile,BufRead *.c set filetype=c
+au BufNewFile,BufRead *.h set filetype=c
+
 " C++
 au BufNewFile,BufRead *.cpp set filetype=cpp
 au BufNewFile,BufRead *.hpp set filetype=cpp
@@ -129,11 +133,14 @@ au BufNewFile,BufRead *.flow set filetype=javascript
 " Fish
 au BufNewFile,BufRead *.fish set filetype=fish
 
-set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
+set suffixesadd=.c,.cpp,.h,.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType php setlocal shiftwidth=4 tabstop=4
+autocmd FileType c setlocal shiftwidth=4 tabstop=4
+autocmd FileType cpp setlocal shiftwidth=4 tabstop=4
 
 "}}}
 
