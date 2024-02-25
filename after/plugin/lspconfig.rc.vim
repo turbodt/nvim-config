@@ -52,6 +52,10 @@ local on_attach = function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
   end
 
+  if client.name == 'ccls' then
+    client.server_capabilities.documentFormattingProvider = false
+  end
+
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
@@ -176,6 +180,8 @@ nvim_lsp.diagnosticls.setup {
       }
     },
     formatFiletypes = {
+      c = 'prettier',
+      cpp = 'prettier',
       css = 'prettier',
       javascript = 'prettier',
       javascriptreact = 'prettier',
