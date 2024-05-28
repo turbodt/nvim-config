@@ -32,6 +32,10 @@ if has("nvim")
   Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown'} " Markdown preview on the browser.
 
   Plug 'lervag/vimtex'  " VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
+
+  Plug 'nvim-lua/plenary.nvim'    " All the lua functions I don't want to write twice.
+  Plug 'epwalsh/obsidian.nvim'    " A Neovim plugin for writing and navigating Obsidian vaults, written in Lua.
+
 endif
 
 call plug#end()

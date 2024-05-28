@@ -98,8 +98,8 @@ For Python:
 | Normal | `Ctrl + a` | Select all | maps.vim |
 | Visual | `*` | Search selected text backwards | maps.vim |
 | Visual | `#` | Search selected text forwards | maps.vim |
-| Normal | `Alt + {'[', ']'}` | Move to previous/next tab | maps.vim |
-| Normal | `Alt + {'{', '}'}` | Move current tab to previous/next position | maps.vim |
+| Normal | `Alt + {'h', 'l'}` | Move to previous/next tab | maps.vim |
+| Normal | `Alt + {'H', 'L'}` | Move current tab to previous/next position | maps.vim |
 |  | `Ctrl + d` | cmp.mapping.scroll_docks(-4) | after/plugin/cmp.rc.vim |
 |  | `Ctrl + f` | cmp.mapping.scroll_docks(4) | after/plugin/cmp.rc.vim |
 |  | `Ctrl + <space>` | cmp.mapping.complete(4) | after/plugin/cmp.rc.vim |
