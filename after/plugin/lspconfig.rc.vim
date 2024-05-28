@@ -45,7 +45,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>f', vim.lsp.buf.format, bufopts)
 
   -- formatting
   if client.name == 'tsserver' then
@@ -59,7 +59,7 @@ local on_attach = function(client, bufnr)
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
     vim.api.nvim_command [[autocmd! * <buffer>]]
-    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+    vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format({async=false})]]
     vim.api.nvim_command [[augroup END]]
   end
 
