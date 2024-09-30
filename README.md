@@ -64,6 +64,8 @@ The following `Plug` has been added:
 
   - [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim): Markdown preview on the browser.
 
+  - [catppuccin/nvim](https://github.com/catppuccin/nvim): Cozy color schemes
+
 #### Latex
 
   - [lervag/vimtex](https://github.com/lervag/vimtex) VimTeX is a modern Vim and Neovim filetype and syntax plugin for LaTeX files.
