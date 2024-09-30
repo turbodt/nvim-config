@@ -182,8 +182,9 @@ if exists("&termguicolors") && exists("&winblend")
   " runtime ./colors/MonokaiPro.vim
   " runtime ./colors/NeoSolarized.vim
   " runtime ./colors/Custom1.vim
-  runtime ./colors/Custom2.vim
-  colorscheme Custom2
+  " runtime ./colors/Custom2.vim
+  " colorscheme Custom2
+  colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 endif
 
 "}}}
