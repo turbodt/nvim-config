@@ -48,7 +48,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.format, bufopts)
 
   -- formatting
-  if client.name == 'tsserver' then
+  if client.name == 'ts_ls' then
     client.server_capabilities.documentFormattingProvider = false
   end
 
@@ -122,7 +122,7 @@ nvim_lsp.ccls.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.tsserver.setup {
+nvim_lsp.ts_ls.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   capabilities = capabilities

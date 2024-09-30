@@ -26,7 +26,7 @@ nnoremap <c-n><c-t> :call OpenNewTabTerminal()<CR>
 
 " Save
 nnoremap <c-s> :w<CR>
-inoremap <c-s> <Esc>:w<CR>i
+inoremap <c-s> <Esc>:w<CR>a
 
 " Select all
 nmap <C-a> gg<S-v>G
