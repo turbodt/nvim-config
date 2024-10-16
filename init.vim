@@ -56,8 +56,8 @@ set smarttab
 
 " indents
 filetype plugin indent on
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 "set nowrap "No Wrap lines
@@ -132,15 +132,22 @@ au BufNewFile,BufRead *.mdx set filetype=markdown
 au BufNewFile,BufRead *.flow set filetype=javascript
 " Fish
 au BufNewFile,BufRead *.fish set filetype=fish
+au BufNewFile,BufRead *.tex set filetype=tex
 
 set suffixesadd=.c,.cpp,.h,.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 
-autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType coffee setlocal shiftwidth=4 tabstop=4
+autocmd FileType ruby setlocal shiftwidth=4 tabstop=4
+autocmd FileType yaml setlocal shiftwidth=4 tabstop=4
 autocmd FileType php setlocal shiftwidth=4 tabstop=4
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
 autocmd FileType cpp setlocal shiftwidth=4 tabstop=4
+autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+autocmd FileType typescript setlocal shiftwidth=4 tabstop=4
+autocmd FileType typescriptreact setlocal shiftwidth=4 tabstop=4
+autocmd FileType bash setlocal shiftwidth=4 tabstop=4
+autocmd FileType zsh setlocal shiftwidth=4 tabstop=4
+autocmd FileType tex setlocal shiftwidth=4 tabstop=4
 
 "}}}
 
