@@ -80,6 +80,9 @@ set listchars=tab:\ ,trail:␣
 "set listchars=tab:\ ,trail:␣,eol:
 "}}}
 
+set ruler
+set rulerformat=%25(%=L:\ %l\ (%p%%),\ C:\ %c\ (%v)%)
+
 " Highlights "{{{
 " ---------------------------------------------------------------------
 set cursorline
