@@ -36,6 +36,14 @@ if has("nvim")
   Plug 'nvim-lua/plenary.nvim'    " All the lua functions I don't want to write twice.
   Plug 'epwalsh/obsidian.nvim'    " A Neovim plugin for writing and navigating Obsidian vaults, written in Lua.
   Plug 'catppuccin/nvim', { 'as': 'catppuccin' } " Nice color themes
+
+  Plug 'nvim-lua/plenary.nvim'   "All the lua functions I don't want to write twice.
+  " Required dependency for obsidian
+  " This fucking shit requires ripgrep to work properly
+  " (sudo apt install ripgrep). This package install a command called 'rg'.
+
+  Plug 'epwalsh/obsidian.nvim'   "A Neovim plugin for writing and navigating Obsidian vaults, written in Lua.
+
 endif
 
 call plug#end()
