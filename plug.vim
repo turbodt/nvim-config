@@ -43,6 +43,7 @@ if has("nvim")
   " (sudo apt install ripgrep). This package install a command called 'rg'.
 
   Plug 'epwalsh/obsidian.nvim'   "A Neovim plugin for writing and navigating Obsidian vaults, written in Lua.
+  Plug 'ibhagwan/fzf-lua'
 
 endif
 
