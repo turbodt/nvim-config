@@ -11,9 +11,9 @@ let maplocalleader = ","
 
 
 " Spelling
-autocmd BufRead,BufNewFile *.tex,*.md setlocal spell
-autocmd BufRead,BufNewFile *.tex,*.md setlocal spelllang=en_gb,en_us,es_es,ca_ca
-autocmd BufRead,BufNewFile *.tex,*.md inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+autocmd BufRead,BufNewFile *.tex,*.md,*.gmi setlocal spell
+autocmd BufRead,BufNewFile *.tex,*.md,*.gmi setlocal spelllang=en_gb,en_us,es_es,ca_ca
+autocmd BufRead,BufNewFile *.tex,*.md,*.gmi inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 autocmd BufRead,BufNewFile *.tex nnoremap sy lvh%hyh%:echo "Copied \"" . @" . "\""<CR>
 autocmd BufRead,BufNewFile *.tex nnoremap sby %lvh%hyh:echo "Copied \"" . @" . "\""<CR>
 autocmd BufRead,BufNewFile *.tex nnoremap sd lvh%hdh%:echo "Cut \"" . @" . "\""<CR>
