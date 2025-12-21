@@ -11,6 +11,8 @@ if not is_obsidian_directory(cwd) then
     return
 end
 
+vim.keymap.set('n', '<Leader>bl', '<cmd>ObsidianBacklinks<cr>')
+
 require("obsidian").setup({
     workspaces = {
         {
