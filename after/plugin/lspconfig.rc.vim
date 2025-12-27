@@ -7,7 +7,6 @@ lua << EOF
 EOF
 
 lua << EOF
-local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
 
 -- Mappings.
@@ -98,13 +97,14 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
-
-nvim_lsp.flow.setup {
+vim.lsp.enable('flow')
+vim.lsp.config('flow', {
   on_attach = on_attach,
   capabilities = capabilities
-}
+})
 
-nvim_lsp.ccls.setup {
+vim.lsp.enable('ccls')
+vim.lsp.config('ccls', {
   on_attach = on_attach,
   init_options = {
     compilationDatabaseDirectory = "build";
@@ -119,29 +119,33 @@ nvim_lsp.ccls.setup {
     };
   },
   filetypes = { "c", "cpp" },
-  capabilities = capabilities
-}
+  capabilities = capabilities,
+})
 
-nvim_lsp.ts_ls.setup {
+vim.lsp.enable('tl_ls')
+vim.lsp.config('ts_ls', {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   capabilities = capabilities
-}
+})
 
-nvim_lsp['pyright'].setup {
+vim.lsp.enable('pyright')
+vim.lsp.config('pyright', {
     on_attach = on_attach,
     flags = lsp_flags,
-}
+})
 
-nvim_lsp['phpactor'].setup {
+vim.lsp.enable('phpactor')
+vim.lsp.config('phpactor', {
     on_attach = on_attach,
     init_options = {
         ["language_server_phpstan.enabled"] = false,
         ["language_server_psalm.enabled"] = false,
     }
-}
+})
 
-nvim_lsp.diagnosticls.setup {
+vim.lsp.enable('diagnosticls')
+vim.lsp.config('diagnosticls', {
   on_attach = on_attach,
   filetypes = { 'c', 'cc', 'css', 'cpp', 'javascript', 'javascriptreact', 'json', 'less', 'pandoc', 'php', 'python', 'scss', 'typescript', 'typescriptreact' },
   init_options = {
@@ -201,7 +205,7 @@ nvim_lsp.diagnosticls.setup {
       json = 'prettier',
     }
   }
-}
+})
 
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
