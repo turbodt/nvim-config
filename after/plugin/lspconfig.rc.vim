@@ -122,7 +122,7 @@ vim.lsp.config('ccls', {
   capabilities = capabilities,
 })
 
-vim.lsp.enable('tl_ls')
+vim.lsp.enable('ts_ls')
 vim.lsp.config('ts_ls', {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
