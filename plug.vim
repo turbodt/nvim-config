@@ -12,7 +12,7 @@ if has("nvim")
                                 " Neovim's language server client
   Plug 'nvimdev/lspsaga.nvim', { 'branch': 'main' }  " Lightweight lsp plugin based on neovim
                                                       " built-in lsp with highly a performant UI
-  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }  " Parser generator tool
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate', 'branch': 'main' }  " Parser generator tool
 
   Plug 'L3MON4D3/LuaSnip'     " Text transformation (completion) snipets
   Plug 'hrsh7th/cmp-nvim-lsp' " nvim-cmp source for neovim's built-in language server client
