@@ -31,13 +31,13 @@ The following `Plug` has been added:
 
   - [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig): A collection of common configurations for Neovim's built-in language server client.
 
-  - [tami5/lspsaga.nvim](https://github.com/tami5/lspsaga.nvim): Lspsaga is light-weight lsp plugin based on neovim built-in lsp with highly a performant UI.
+  - [nvimdev/lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim): Lspsaga is light-weight lsp plugin based on neovim built-in lsp with a performant UI.
 
 #### Parsing & auto completion
 
   - [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Tree-sitter is a parser generator tool and an incremental parsing library.
 
-  - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip): Adds several lua snipets.
+  - [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip): Adds several Lua snippets.
 
   - [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp): nvim-cmp source for neovim's built-in language server client.
 
@@ -85,12 +85,19 @@ Some `npm` dependencies are:
   - `npm install -g typescript typescript-language-server`
   - `npm install -g neovim`
   - `npm i -g diagnostic-languageserver`
+  - `npm i -g eslint_d prettier_d_slim`
 
 For C++:
   - Archlinux: `sudo pacman -S ccls` as stated [here](https://github.com/MaskRay/ccls/wiki/Build#arch-linux).
 
 For Python:
   - `npm i -g pyright`
+
+For PHP:
+  - Install `phpactor`
+
+For Flow:
+  - Install `flow`
 
 ## Current Mappings
 
@@ -110,14 +117,16 @@ For Python:
 | Visual | `#` | Search selected text forwards | maps.vim |
 | Normal | `Alt + {'h', 'l'}` | Move to previous/next tab | maps.vim |
 | Normal | `Alt + {'H', 'L'}` | Move current tab to previous/next position | maps.vim |
-|  | `Ctrl + d` | cmp.mapping.scroll_docks(-4) | after/plugin/cmp.rc.vim |
-|  | `Ctrl + f` | cmp.mapping.scroll_docks(4) | after/plugin/cmp.rc.vim |
-|  | `Ctrl + <space>` | cmp.mapping.complete(4) | after/plugin/cmp.rc.vim |
+| Insert | `Ctrl + d` | cmp.mapping.scroll_docs(-4) | after/plugin/cmp.rc.vim |
+| Insert | `Ctrl + f` | cmp.mapping.scroll_docs(4) | after/plugin/cmp.rc.vim |
+| Insert | `Ctrl + <space>` | cmp.mapping.complete() | after/plugin/cmp.rc.vim |
 |  | `Ctrl + e` | cmp.mapping.close() | after/plugin/cmp.rc.vim |
 |  | `<CR>` | cmp.mapping.confirm() | after/plugin/cmp.rc.vim |
 | Normal | `gD` | vim.lsp.buf.declaration() | after/plugin/lspconfig.rc.vim |
 | Normal | `gd` | vim.lsp.buf.definition() | after/plugin/lspconfig.rc.vim |
+| Normal | `K` | vim.lsp.buf.hover() | after/plugin/lspconfig.rc.vim |
 | Normal | `gi` | vim.lsp.buf.implementation() | after/plugin/lspconfig.rc.vim |
+| Normal | `Ctrl + k` | vim.lsp.buf.signature_help() | after/plugin/lspconfig.rc.vim |
 | Normal | `<space>wa` |  vim.lsp.buf.add_workspace_folder() | after/plugin/lspconfig.rc.vim |
 | Normal | `<space>wr` |  vim.lsp.buf.remove_workspace_folder() | after/plugin/lspconfig.rc.vim |
 | Normal | `<space>wl` |  print(vim.inspect(vim.lsp.buf.list_workspace_folders())) | after/plugin/lspconfig.rc.vim |
@@ -125,15 +134,16 @@ For Python:
 | Normal | `<space>rn` |  vim.lsp.buf.rename() | after/plugin/lspconfig.rc.vim |
 | Normal | `<space>ca` |  vim.lsp.buf.code_action() | after/plugin/lspconfig.rc.vim |
 | Normal | `gr` | vim.lsp.buf.references() | after/plugin/lspconfig.rc.vim |
-| Normal | `<space>e` |  vim.lsp.diagnostic.open_float() | after/plugin/lspconfig.rc.vim |
-| Normal | `Shift + Ctrl + d` |  vim.lsp.diagnostic.goto_next() | after/plugin/lspconfig.rc.vim |
-| Normal | `<space>q` |  vim.lsp.diagnostic.set_loclist() | after/plugin/lspconfig.rc.vim |
-| Normal | `<space>f` |  vim.lsp.buf.formatting() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>e` |  vim.diagnostic.open_float() | after/plugin/lspconfig.rc.vim |
+| Normal | `[d` |  vim.diagnostic.goto_prev() | after/plugin/lspconfig.rc.vim |
+| Normal | `]d` |  vim.diagnostic.goto_next() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>q` |  vim.diagnostic.setloclist() | after/plugin/lspconfig.rc.vim |
+| Normal | `<space>f` |  vim.lsp.buf.format() | after/plugin/lspconfig.rc.vim |
 | Normal | `Ctrl + d` | diagnostic_jump_next | after/plugin/lspsaga.rc.vim |
 | Normal | `gp` | preview_definition | after/plugin/lspsaga.rc.vim |
 | Normal | `T` | hover_doc | after/plugin/lspsaga.rc.vim |
 | | `Ctrl + f` | smart_scroll_with_saga(1) | after/plugin/lspsaga.rc.vim |
-| | `Ctrl + b` | smart_scroll_with_saga(-1) |  after/plugin/lspsaga.rc.vim |
+| | `Ctrl + u` | smart_scroll_with_saga(-1) |  after/plugin/lspsaga.rc.vim |
 | Normal | `gh` | lsp_finder | after/plugin/lspsaga.rc.vim |
 | Normal | `Ctrl + b` | Toggle nerd tree | after/plugin/neerdtree.rc.vim |
 | Normal | `Ctrl + p` | Search files with fzf-lua | after/plugin/fzf.rc.vim |

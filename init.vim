@@ -168,10 +168,6 @@ if has("unix")
   endif
 
 endif
-if has('win32')
-  runtime ./windows.vim
-endif
-
 runtime ./maps.vim
 "}}}
 
@@ -204,4 +200,3 @@ endif
 
 runtime ./mkdir-on-save.vim
 "}}}
-

@@ -18,7 +18,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " tabs
 nnoremap <C-t> :tabnew .<CR>
-" see ./unix.vim and ./unix.vim to custom mappings
+" see ./linux.vim and ./macos.vim to custom mappings
 
 nnoremap <c-n> :call OpenTerminal()<CR>
 nnoremap <c-n><c-s> :call OpenVerticalTerminal()<CR>

@@ -4,7 +4,7 @@
 " start terminal in insert mode
 au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 
-" open terminal on ctrl+;
+" open terminal with mappings defined in maps.vim
 " uses zsh instead of bash
 function! OpenTerminal()
   split term://zsh

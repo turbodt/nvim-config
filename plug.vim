@@ -14,7 +14,7 @@ if has("nvim")
                                                       " built-in lsp with highly a performant UI
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate', 'branch': 'main' }  " Parser generator tool
 
-  Plug 'L3MON4D3/LuaSnip'     " Text transformation (completion) snipets
+  Plug 'L3MON4D3/LuaSnip'     " Text transformation (completion) snippets
   Plug 'hrsh7th/cmp-nvim-lsp' " nvim-cmp source for neovim's built-in language server client
 
   Plug 'hrsh7th/cmp-buffer'   " nvim-cmp source for buffer words

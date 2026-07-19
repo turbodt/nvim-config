@@ -22,7 +22,7 @@ local function get_hashtags()
     return tags
 end
 
-local function open_hashtag_panel()
+function M.open_hashtag_panel()
     local tags = get_hashtags()
     if #tags == 0 then
       print("No hashtags found!")
@@ -49,7 +49,9 @@ local function open_hashtag_panel()
     end
     vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
 
-    vim.api.nvim_buf_set_keymap(buf, "n", "<CR>", ":lua require('plugin').jump_to_hashtag()<CR>", { noremap = true, silent = true })
+    vim.keymap.set("n", "<CR>", function()
+      M.jump_to_hashtag()
+    end, { buffer = buf, noremap = true, silent = true })
 
     M.hashtag_list = tags
 end
@@ -67,8 +69,8 @@ function M.jump_to_hashtag()
 end
 
 function M.setup()
-    vim.api.nvim_create_user_command("HashtagPanel", open_hashtag_panel, {})
-    vim.api.nvim_set_keymap("n", "<leader>ht", ":lua require('outline').open_hashtag_panel()<CR>", { noremap = true, silent = true })
+    vim.api.nvim_create_user_command("HashtagPanel", M.open_hashtag_panel, {})
+    vim.keymap.set("n", "<leader>ht", M.open_hashtag_panel, { noremap = true, silent = true })
     return M
 end
 
