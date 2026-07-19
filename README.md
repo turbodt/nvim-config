@@ -56,6 +56,10 @@ The following `Plug` has been added:
 
   - [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree): The NERDTree is a file system explorer for the Vim editor.
 
+#### Search
+
+  - [ibhagwan/fzf-lua](https://github.com/ibhagwan/fzf-lua): Fuzzy finder integration powered by fzf and ripgrep.
+
 #### View
 
   - [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons): Adds icons to the plugins.
@@ -72,6 +76,10 @@ The following `Plug` has been added:
 
 
 ## Dependencies
+
+System dependencies:
+  - `fzf`
+  - `ripgrep` (`rg`)
 
 Some `npm` dependencies are:
   - `npm install -g typescript typescript-language-server`
@@ -128,4 +136,8 @@ For Python:
 | | `Ctrl + b` | smart_scroll_with_saga(-1) |  after/plugin/lspsaga.rc.vim |
 | Normal | `gh` | lsp_finder | after/plugin/lspsaga.rc.vim |
 | Normal | `Ctrl + b` | Toggle nerd tree | after/plugin/neerdtree.rc.vim |
-| Normal | `Ctrl + p` | Search file with FZF | after/plugin/fzf.rc.vim |
+| Normal | `Ctrl + p` | Search files with fzf-lua | after/plugin/fzf.rc.vim |
+| Normal | `<space>ff` | Search files with fzf-lua | after/plugin/fzf.rc.vim |
+| Normal | `<space>fg` | Search text with ripgrep and fzf-lua | after/plugin/fzf.rc.vim |
+| Normal | `<space>fb` | Search open buffers with fzf-lua | after/plugin/fzf.rc.vim |
+| Normal | `<space>fo` | Search old files with fzf-lua | after/plugin/fzf.rc.vim |
