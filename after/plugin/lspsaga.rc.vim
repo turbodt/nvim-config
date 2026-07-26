@@ -5,6 +5,9 @@ saga.setup({
   ui = {
     border = "rounded",
   },
+  lightbulb = {
+    enable = false,
+  },
 })
 
 EOF
